@@ -64,7 +64,6 @@ int tCG::p11(){ //    AREX -> HAREX E )
         S1->obj = "(1. " + S1->obj + " " + S2->obj + ")";
     else S1->obj = "(" + S1->obj + " " + S2->obj + ")";
     return 0;
-	return 0;
 }
 
 int tCG::p12(){ //   HAREX -> ( AROP
