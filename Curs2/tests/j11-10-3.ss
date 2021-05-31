@@ -1,0 +1,10 @@
+(define (d x) x)
+(define x 7)
+(define (f y)
+  (let (
+    (a 5)
+    (b 9)
+  )
+  (x 6)
+  )
+)
