@@ -161,6 +161,7 @@ int tSM::p10(){ //       E -> CPROC
 				return 1;
 			}
 		default:tgName& ref = globals[name];
+		// Тут бы ещё по-хорошему надо после VAR добавить отдельно условие на VAR|BUILT
 		if(ref.test(VAR)) {
 			ferror_message+=
 			"Error[10-3] in line "+ S1->line +": The procedure call identifier '"
