@@ -48,7 +48,9 @@ int tSM::p01(){ //       S -> PROG
 	std::string name;
 	bool VarProc = 0; // Var == 0; Proc == 1;
 	};
-
+	
+	// Arr нужен для того, чтобы отсортить ошибки по номерам строк
+	// без Arr сначала выведутся процедуры, а потом переменные
 	std::map<std::string,NameVarProc> Arr;
 
 	for(tGlobal::iterator it=globals.begin();
@@ -161,7 +163,7 @@ int tSM::p10(){ //       E -> CPROC
 				return 1;
 			}
 		default:tgName& ref = globals[name];
-		// Тут бы ещё по-хорошему надо после VAR добавить отдельно условие на VAR|BUILT
+		// Тут бы ещё по-хорошему надо перед VAR добавить отдельно условие на VAR|BUILT
 		if(ref.test(VAR)) {
 			ferror_message+=
 			"Error[10-3] in line "+ S1->line +": The procedure call identifier '"
