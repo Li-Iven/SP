@@ -45,8 +45,8 @@ int tSM::p01(){ //       S -> PROG
 	bool error=false;
 
 	struct NameVarProc {
-	std::string name;
-	bool VarProc = 0; // Var == 0; Proc == 1;
+		std::string name;
+		bool VarProc = 0; // Var == 0; Proc == 1;
 	};
 	
 	// Arr нужен для того, чтобы отсортить ошибки по номерам строк
